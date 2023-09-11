@@ -1,10 +1,17 @@
+
+:root{
+--width-main-menu:40rem;}
 .bt-hamburguer-toggle{
     --bt-size:5rem;
     --bt-padding:1rem;
     height: var(--bt-size);
     width: var(--bt-size);
-    position: relative;
-
+    position: fixed;
+    left: 1em;
+    right: 1em;
+    cursor:pointer;
+    z-index: 1 ;
+    
 }
 .bt-hamburguer-toggle span,
 .bt-hamburguer-toggle::before, 
@@ -24,15 +31,36 @@
 .bt-hamburguer-toggle::after{
     bottom:var(--bt-padding);
 }
-.bt-hamburguer-toggle:hover::before{
+.bt-hamburguer-toggle.opened{
+   
+    transform: translateX(calc(var(--width-main-menu)-(var(--bt-size )/2)));
+}
+.bt-hamburguer-toggle.opened::before{
     transform: rotate(45deg) scaleX(1.35);
     transform-origin: 0 0 ;
     
 }
-.bt-hamburguer-toggle:hover::after{
+.bt-hamburguer-toggle.opened::after{
     transform: rotate(-45deg) scaleX(1.35);
     transform-origin: 0 0 ;
 }
-.bt-hamburguer-toggle:hover span{
+.bt-hamburguer-toggle.opened span{
     scale: 0;
+}
+
+
+
+nav.main-menu {
+    position: fixed;
+    background-color:rgba(0 0 0 / .5);
+    width:var(--width-main-menu);
+    height: 100svh;
+    top:0 ;
+    left: 0 ;
+    transform: translateX(-100%);
+   
+}
+nav.main-menu.opened{
+    transform:translateX(0%);
+    transition: 3s;
 }
