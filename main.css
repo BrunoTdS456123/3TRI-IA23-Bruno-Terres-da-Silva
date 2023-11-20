@@ -84,7 +84,7 @@
 
 .main-menu a {
     display: block;
-    color: white;
+    color: red;
     text-decoration: none;
     background-color: rgba(0 0 0 / .8);
     padding: .5rem;
@@ -114,24 +114,13 @@ body {
     min-height: 100dvh;
 }
 
-header {
-    text-align: center;
-    color: black ;
-    background-color:whitesmoke ;
-    border: 5px solid black;
-    height: 100px;
-}
 
-main {
-    background-color:whitesmoke;
+
+
+
+
     
-    min-height: calc(100dvh - 200px);
-}
 
-footer {
-    border: 3px solid black;
-    height: 100px;
-}
 
 /* -------------------------- */
 
@@ -194,10 +183,7 @@ dialog:modal::backdrop {
 }
 
 main section img {
-   /* width: 768px;
-    height: 432px;
-    background-color: black;
-    background-size: cover;*/
+ 
     width: 400px;
     height: 400px;
     padding:  10px 8px;
@@ -219,17 +205,49 @@ header img {
 }
 footer{
     font-size: 25px;
+    background-color: white;
+    border: 3px solid black;
+    height: 100px;
     
 }
+body{ background-color: black;}
 main {
-    background-color:white ;
+    color: white;
+    background-color:black;
+    
 }
 header {
+    text-align: center;
+    color: black ;
+    background-color:whitesmoke ;
+    border: 5px solid black;
+    height: 100px;
+    position: relative;
+    align-items: center;
+    text-align: center;
     
 }
+header img{
+    position: absolute;
+    top: 0 ;
+    right: 0 ;
+}
+
 span{
     text-align: center;
 }
 h2{
     border:  30px white;
+}
+button{
+    background-color: #ff0000; 
+    color: #fff; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+button:hover{
+    background-color: #cc0000;
 }
